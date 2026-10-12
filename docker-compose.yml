@@ -1,0 +1,23 @@
+
+services:
+  database:
+    image: postgres:16-alpine
+    container_name: inventa-pos
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: inventa_pos
+      POSTGRES_USER: inventa_user
+      POSTGRES_PASSWORD: inventa_password
+    ports:
+      - 5432:5432
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - inventa_network
+
+networks:
+  inventa_network:
+    driver: bridge
+
+volumes:
+  postgres_data:
