@@ -28,7 +28,7 @@ class Product extends Model
         return [
             'cost_price' => 'decimal:2',
             'selling_price' => 'decimal:2',
-            'min_stock_alert' => 'boolean',
+            'min_stock_alert' => 'integer',
             'is_active' => 'boolean',
         ];
     }
