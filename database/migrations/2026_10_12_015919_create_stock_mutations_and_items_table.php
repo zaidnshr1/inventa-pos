@@ -27,7 +27,7 @@ return new class extends Migration
             $table->timestamps();
         });
 
-        Schema::create('stock_mutations_items', function (Blueprint $table) {
+        Schema::create('stock_mutation_items', function (Blueprint $table) {
             $table->id();
             $table->foreignId('stock_mutation_id')->constrained('stock_mutations')->cascadeOnDelete();
             $table->foreignId('product_id')->constrained('products')->strictOnDelete();
