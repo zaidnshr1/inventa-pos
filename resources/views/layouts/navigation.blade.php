@@ -24,6 +24,12 @@
                     <x-nav-link :href="route('pos.index')" :active="request()->routeIs('pos.*')">
                         {{ __('Mesin Kasir (POS)') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('reports.index')" :active="request()->routeIs('reports.*')">
+                        {{ __('Laporan Penjualan') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('activity_logs.index')" :active="request()->routeIs('activity_logs.*')">
+                        {{ __('Audit Trail') }}
+                    </x-nav-link>
                 </div>
             </div>
 
