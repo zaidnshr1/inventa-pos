@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PosController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\StockMutationController;
@@ -24,6 +25,10 @@ Route::middleware('auth')->group(function () {
     Route::post('mutations/{id}/approve', [StockMutationController::class, 'approve'])->name('mutations.approve');
     Route::post('mutations/{id}/receive', [StockMutationController::class, 'receive'])->name('mutations.receive');
     Route::post('mutations/{id}/reject', [StockMutationController::class, 'reject'])->name('mutations.reject');
+
+    Route::get('/pos', [PosController::class, 'index'])->name('pos.index');
+    Route::post('/pos/checkout', [PosController::class, 'checkout'])->name('pos.checkout');
+    Route::get('/pos/receipt/{id}', [PosController::class, 'printReceipt'])->name('pos.receipt');
 });
 
 require __DIR__.'/auth.php';

@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('customer_phone', 20)->nullable();
 
             $table->decimal('subtotal', 15, 2)->default(0);
-            $table->decimal('discount_amount, 15, 2')->default(0);
+            $table->decimal('discount_amount', 15, 2)->default(0);
             $table->decimal('tax_amount', 15, 2)->default(0);
             $table->decimal('grand_total', 15, 2)->default(0);
 

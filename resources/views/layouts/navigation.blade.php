@@ -21,6 +21,9 @@
                     <x-nav-link :href="route('mutations.index')" :active="request()->routeIs('mutations.*')">
                         {{ __('Mutasi Stok') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('pos.index')" :active="request()->routeIs('pos.*')">
+                        {{ __('Mesin Kasir (POS)') }}
+                    </x-nav-link>
                 </div>
             </div>
 
